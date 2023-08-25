@@ -57,4 +57,3 @@ class Pirate:
         return self.state
 
 # TODO: Would it be possible to add "He's dead." to decorator or make it simpler somehow???
-

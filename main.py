@@ -1,8 +1,4 @@
-from pirates_and_ships import Pirate
+import armada
 
-one_pirate = Pirate()
-that_pirate = Pirate()
-one_pirate.brawl(that_pirate)
-
-one_pirate.drink_some_rum()
-that_pirate.hows_it_going_mate()
+armada = armada.Armada(2)
+print(f"Second ship has {len(armada.ships[1].alive)} alive pirates.")
