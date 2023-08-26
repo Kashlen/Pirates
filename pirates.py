@@ -55,5 +55,3 @@ class Pirate:
         """This kills off the pirate. When a pirate is dead, every method simply results in 'he's dead'."""
         self.state = "dead"
         return self.state
-
-# TODO: Would it be possible to add "He's dead." to decorator or make it simpler somehow???

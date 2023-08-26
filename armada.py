@@ -11,10 +11,19 @@ class Armada:
             ship.fill_ship()
 
     def war(self, other_armada):
-        """Two armadas engage in war. Returns TRUE if this ship is the winner."""
-        # Should work like merge sort.
-        # First ship from the first armada battles the first one from the other.
-        # The looser ship gets skipped so the next ship comes in play from the loser ship's armada.
-        # It starts a battle with the first (not yet defeated) ship from the other armada.
-        # Whichever armada gets to the end of its ships loses the war.
-        # Returns TRUE if this ship is the winner.
+        """
+        Two armadas engage in war. Returns TRUE if this ship is the winner.
+        Whichever armada gets to the end of its ships loses the war.
+        """
+        this_armada_index = 0
+        other_armada_index = 0
+        while this_armada_index < len(self.ships) and other_armada_index < len(other_armada.ships):
+            result = self.ships[this_armada_index].battle(other_armada.ships[other_armada_index])
+            if result:
+                other_armada_index += 1
+            else:
+                this_armada_index += 1
+        if this_armada_index == len(self.ships):
+            return False
+        if other_armada_index == len(other_armada.ships):
+            return True

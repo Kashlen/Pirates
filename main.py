@@ -1,4 +1,4 @@
-import armada
+import war_app
 
-armada = armada.Armada(2)
-print(f"Second ship has {len(armada.ships[1].alive)} alive pirates.")
+war = war_app.WarApp()
+war.main()
